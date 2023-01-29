@@ -1,0 +1,37 @@
+<script>
+
+    function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarLinea();
+
+    }
+
+    var numeroComputador = Math.round(Math.random() * 10);
+    var intentos = 3
+    var contador = 1
+
+    while (contador <= intentos) {
+
+        var numeroUsuario = parseInt(prompt("ingrese un numero del 1 al 10"));
+
+        if (numeroComputador == numeroUsuario) {
+            alert("FELICITACIONES GANASTE!, EN EL INTENTO " + contador);
+            break;
+        } else {
+            alert("error, intentalo de nuevo!");
+        }
+        contador++;
+    }
+
+
+    imprimir("fin");
+
+</script>
